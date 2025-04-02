@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^11.9.0",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.40.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.3"
+    "next": "15.2.3",
+    "next-auth": "^4.24.11"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.30.5",
+    "@types/better-sqlite3": "^7.6.12",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4",
     "eslint": "^9",

@@ -47,6 +47,7 @@ export async function signUp({ username, email, password }) {
       password: hashedPassword,
     })
     .execute();
+    
   // If want to make admin
   // role: "admin",
 

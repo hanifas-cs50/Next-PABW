@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { deletePost } from "@/actions/postActions";
+import { deletePost } from "@/zzz_actions/postActions";
 import Link from "next/link";
 
 export default function PostsTable({ posts }) {

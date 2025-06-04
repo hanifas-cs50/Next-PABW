@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { updateUserRole } from "@/actions/adminActions";
+import { updateUserRole } from "@/zzz_actions/adminActions";
 
 export default function SingleUser({ user }) {
   const [isLoading, setIsLoading] = useState(false);

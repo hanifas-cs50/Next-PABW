@@ -1,6 +1,6 @@
 "use client";
 
-import { deletePost } from "@/actions/postActions";
+import { deletePost } from "@/zzz_actions/postActions";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

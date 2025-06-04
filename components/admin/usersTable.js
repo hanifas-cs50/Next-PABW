@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { deleteUser } from "@/actions/adminActions";
+import { deleteUser } from "@/zzz_actions/adminActions";
 import Link from "next/link";
 
 export default function UsersTable({ users }) {

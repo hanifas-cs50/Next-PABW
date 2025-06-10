@@ -3,9 +3,13 @@
 #### Prerequisites
 
 .env file
+
 DB_FILE_NAME=sqlite.db
+
 NEXTAUTH_SECRET=Set this using => node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+
 NEXTAUTH_URL=Set your computer to host and IPConfig (don't forget to add port 3000)
+
 NEXTAUTH_URL_INTERNAL=http://localhost:3000
 
 Add uploads folder to public, for image uploads

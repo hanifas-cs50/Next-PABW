@@ -11,6 +11,16 @@ export default function AdminUser({ userData }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const handleDate = (dateString) => {
+    const date = new Date(`${dateString.replace(" ", "T")}Z`);
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const timeOptions = { hour: "2-digit", minute: "2-digit", hour12: false };
+
+    const datePart = date.toLocaleDateString("id-ID", options);
+    const timePart = date.toLocaleTimeString("en-US", timeOptions);
+    return `${datePart}, ${timePart}`;
+  };
+
   const handleSubmit = async (user_id) => {
     setIsLoading(true);
     setError("");
@@ -39,7 +49,9 @@ export default function AdminUser({ userData }) {
           </p>
           <p>
             Created At:{" "}
-            <span className="block w-full">{userData.created_at}</span>
+            <span className="block w-full">
+              {handleDate(userData.created_at)}
+            </span>
           </p>
           <div className="relative">
             <label htmlFor="roleSelect">Role:</label>

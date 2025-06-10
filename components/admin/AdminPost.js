@@ -11,6 +11,16 @@ export default function AdminPost({ postData }) {
   const [error, setError] = useState("");
   const router = useRouter();
 
+  const handleDate = (dateString) => {
+    const date = new Date(`${dateString.replace(" ", "T")}Z`);
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const timeOptions = { hour: "2-digit", minute: "2-digit", hour12: false };
+
+    const datePart = date.toLocaleDateString("id-ID", options);
+    const timePart = date.toLocaleTimeString("en-US", timeOptions);
+    return `${datePart}, ${timePart}`;
+  };
+
   const handleDelete = async (post_id) => {
     setIsLoading(true);
     setError("");
@@ -45,7 +55,7 @@ export default function AdminPost({ postData }) {
             </p>
             <p>
               Created at:{" "}
-              <span className="block w-full">{postData.created_at}</span>
+              <span className="block w-full">{handleDate(postData.created_at)}</span>
             </p>
             <p>
               Post Content:{" "}

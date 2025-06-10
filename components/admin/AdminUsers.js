@@ -30,6 +30,16 @@ export default function AdminUsers({ currentPage, totalPages, usersPerPage }) {
     fetchData();
   }, [offset, usersPerPage]);
 
+  const handleDate = (dateString) => {
+    const date = new Date(`${dateString.replace(" ", "T")}Z`);
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const timeOptions = { hour: "2-digit", minute: "2-digit", hour12: false };
+
+    const datePart = date.toLocaleDateString("id-ID", options);
+    const timePart = date.toLocaleTimeString("en-US", timeOptions);
+    return `${datePart}, ${timePart}`;
+  };
+
   const handleDelete = async (user_id) => {
     setDeletingId(user_id);
     setDeleteError("");
@@ -84,7 +94,7 @@ export default function AdminUsers({ currentPage, totalPages, usersPerPage }) {
                 <td className="border p-2">{user.username}</td>
                 <td className="border p-2">{user.email}</td>
                 <td className="border p-2">{user.role}</td>
-                <td className="border p-2">{user.created_at}</td>
+                <td className="text-center border p-2">{handleDate(user.created_at)}</td>
                 <td className="w-20 border p-0" style={{ height: "inherit" }}>
                   <Link
                     className={`w-full h-full grid place-content-center font-medium text-white ${

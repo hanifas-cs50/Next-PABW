@@ -1,0 +1,33 @@
+{
+  "name": "next_pabw2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "push": "drizzle-kit push"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.40.0",
+    "better-sqlite3": "^11.9.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.7",
+    "date-fns": "^4.1.0",
+    "sharp": "^0.34.1",
+    "next": "^15.3.2",
+    "next-auth": "^4.24.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.5",
+    "@types/better-sqlite3": "^7.6.12",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3"
+  }
+}
